@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'IBM Plex Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap');
+}
+
+@mixin form-title-styles {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 44px;
+}
+
+@mixin sign-in-question-styles {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+@mixin label-text-styles($color) {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color;
+}
+
+@mixin placeholder-text-styles($color) {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color;
+}
+
+@mixin error-message-styles {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $error-message;
+}

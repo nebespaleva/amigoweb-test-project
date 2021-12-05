@@ -1,0 +1,117 @@
+@import '../../assets/index.scss';
+
+.form {
+    margin: 20px 0;
+    width: 400px;
+    height: 100%;
+    background-color: $background-form;
+    border-radius: 24px;
+    box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.02), 0px 32px 64px rgba(44, 39, 56, 0.04);
+    padding: 40px 30px;
+}
+
+.form-title {
+    @include form-title-styles;
+}
+
+.form-sign-in {
+    @include sign-in-question-styles;
+    margin: 9px 0 57px;
+
+    & > a {
+        color: $link-color;
+        text-decoration: none;
+    }
+}
+
+.form-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 8px;
+
+    & > label {
+        @include label-text-styles($label-color);
+        margin-bottom: 7px;
+    }
+
+    & > input {
+        height: 1.5vh;
+        border: 1px solid $border-color;
+        box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+        border-radius: 6px;
+        padding: 16px;
+
+        &::placeholder {
+            @include placeholder-text-styles($placeholder-color);
+        }
+
+        &:focus {
+            outline: 2px solid #0880AE;
+        }
+    }
+}
+
+.form-error {
+    @include error-message-styles;
+    margin-top: 8px;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.form-checkbox {
+    margin: 26px 0 40px;
+}
+
+
+.form-checkbox-label {
+    @include label-text-styles($label-color);
+
+    & > a {
+        color: $link-color;
+        text-decoration: none;
+    }
+}
+
+input[type='checkbox'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type='checkbox'] + .form-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+input[type='checkbox'] + .form-checkbox-label::before {
+    content: ' ';
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid $border-color;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+    background-color: $background-form;
+}
+
+input[type='checkbox']:checked + .form-checkbox-label::before {
+    content: ' ';
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    border: 2px solid $border-focus-color;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+    background-color: $background-form;
+    background-image: url('../../assets/images/Mask.svg');
+    background-repeat: no-repeat;
+    background-position: 6px 8px;
+}
+
+
+

@@ -1,0 +1,39 @@
+@import '../../assets/index.scss';
+
+.select {
+    @include placeholder-text-styles($select-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+    border: 1px solid $border-color;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 6px;
+    padding: 0 16px;
+}
+
+.select-active {
+    border: 2px solid $border-focus-color;
+}
+
+.select-options-list {
+    @include placeholder-text-styles($label-color);
+    position: absolute;
+    list-style: none;
+    padding: 13px 0;
+    top: 85px;
+    width: 99.5%;
+    border: 1px solid $border-color;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04), 0px 20px 20px rgba(44, 39, 56, 0.04);
+    border-radius: 6px;
+    z-index: 10;
+    background-color: $background-form;
+}
+
+.select-options-item {
+    padding: 11px 16px;
+}
+
+.selected {
+    background-color: $background-selected-option;
+}

@@ -1,0 +1,11 @@
+@import './assets/index.scss';
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    width: 100wv;
+    min-height: 100vh;
+    background-color: $background;
+}
